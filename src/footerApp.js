@@ -1,12 +1,34 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import { Container, Content, Footer, FooterTab, Button, Icon, Text } from 'native-base';
 
 export default class FooterApp extends Component {
   render() {
     return (
-      <Text>
-        Footer
-      </Text>
+              <Container>
+                  <Content />
+                  <Footer >
+                      <FooterTab>
+                          <Button vertical>
+                              <Icon name="apps" />
+                              <Text>Apps</Text>
+                          </Button>
+                          <Button vertical>
+                              <Icon name="camera" />
+                              <Text>Camera</Text>
+                          </Button>
+                          <Button active vertical>
+                              <Icon active name="navigate" />
+                              <Text>Navigate</Text>
+                          </Button>
+                          <Button vertical>
+                              <Icon name="person" />
+                              <Text>Contact</Text>
+                          </Button>
+                      </FooterTab>
+                  </Footer>
+              </Container>
+
+
     );
   }
 }
