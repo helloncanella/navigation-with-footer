@@ -4,9 +4,7 @@ import { View, Text } from 'react-native';
 export default class HeaderApp extends Component {
   render() {
     return (
-      <View>
-        <Text>Header</Text>
-      </View>
+        <Text>Header</Text> 
     );
   }
 }
