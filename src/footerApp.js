@@ -12,14 +12,10 @@ export default class FooterApp extends Component {
                               <Icon name="apps" />
                               <Text>Apps</Text>
                           </Button>
-                          <Button vertical>
+                          <Button active vertical>
                               <Icon name="camera" />
                               <Text>Camera</Text>
-                          </Button>
-                          <Button active vertical>
-                              <Icon active name="navigate" />
-                              <Text>Navigate</Text>
-                          </Button>
+                          </Button> 
                           <Button vertical>
                               <Icon name="person" />
                               <Text>Contact</Text>
