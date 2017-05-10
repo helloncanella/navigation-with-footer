@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
-import { Content } from 'native-base';
+import { Content, H3, Container } from 'native-base';
 import {
   Text,
   View,
   Dimensions,
+  Image,
+  StyleSheet,
 } from 'react-native';
 import Carousel from 'react-native-looped-carousel';
 
@@ -25,25 +27,44 @@ export default class Home extends Component {
 
   render() {
     return (
-       <Content>
-        <Text>Produtos/Serviços</Text>
-        <View style={{ flex: 1 }} onLayout={this._onLayoutDidChange}>
-          <Carousel
-            autoplay={false}
-            style={this.state.size}
-            currentPage={1}
-            onAnimateNextPage={(p) => console.log(p)}
-         >
-          <View style={[{ backgroundColor: '#BADA55' }, this.state.size]}><Text>1</Text></View>
-          <View style={[{ backgroundColor: 'red' }, this.state.size]}><Text>2</Text></View>
-          <View style={[{ backgroundColor: 'blue' }, this.state.size]}><Text>3</Text></View>
-        </Carousel>
-       </View>
-       </Content>
+      <Container>
+
+      <Content>
+       <H3 style={{margin: 10, fontWeight: 'bold', color: '#2A2C2E'}} >Produtos/Serviços</H3>
+       <View style={{ flex: 1 }} onLayout={this._onLayoutDidChange}>
+         <Carousel
+           autoplay={false}
+           style={this.state.size}
+           currentPage={1}
+           onAnimateNextPage={(p) => console.log(p)}
+        >
+
+         <Image source={require('../../img/eastt.png')} style={[this.state.size]} />
+         <Image source={require('../../img/frangoo.jpg')} style={[this.state.size]} />
+         <Image source={require('../../img/tort.jpg')} style={[this.state.size]} />
+         <Image source={require('../../img/pendal.png')} style={[this.state.size]} />
+       </Carousel>
+      </View>
+      </Content>
+
+      <Content>
+             <H3 style={{margin: 10, fontWeight: 'bold', color: '#2A2C2E'}} >Restaurante(RU)</H3>
+        <Image source={require('../../img/restaurante.jpg')} style={{width: width, height: 200}} />
+      </Content>
+      </Container>
 
 
     );
   }
 }
+
+
+const styles = StyleSheet.create({
+  h3: {
+    fontSize: 20,
+    textAlign: 'center',
+    margin: 10,
+  },
+});
 
 module.export = Home;
