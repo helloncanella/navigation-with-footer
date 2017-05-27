@@ -37,9 +37,11 @@ class Service extends Component{
 
 
  const styles = StyleSheet.create({
-  text: {
-   fontSize: 28,
-   padding: 10
+  text:{
+    fontSize: 24,
+    padding: 10,
+    fontWeight: 'bold',
+    fontFamily: 'Roboto'
   }
  });
 

@@ -45,7 +45,7 @@ export default class extends Component {
         <View>
          <Swiper
            autoplay
-           height={280}
+           height={240}
            >
            {
              this.state.imagesSlider.map((item, index) => <Slider

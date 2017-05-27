@@ -3,17 +3,22 @@ import { AppRegistry, View } from 'react-native';
 import HeaderApp from './header';
 import Home from './screens/home';
 import FooterApp from './footerApp';
-import { Container } from 'native-base';
+import { Container, StyleProvider } from 'native-base';
+import studentMeTheme from './theme/variables/studentMeTheme';
+import getTheme from './theme/components';
 
 
 export default class studentMeMobile extends Component {
   render() {
     return (
-      <Container>
-       <HeaderApp/>
-       <Home/>
-       <FooterApp/>
-      </Container>
+      <StyleProvider style={getTheme(studentMeTheme)}>
+        <Container>
+          <HeaderApp/>
+           <Home/>
+           <FooterApp/>
+          </Container>
+
+      </StyleProvider>
     );
   }
 }
