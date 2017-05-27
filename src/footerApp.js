@@ -4,9 +4,7 @@ import {Footer, FooterTab, Button, Icon, Container, Content } from 'native-base'
 
 export default class FooterApp extends Component {
   render() {
-    return (
-      <Container>
-       <Content />
+    return (  
 
                      <Footer >
                          <FooterTab>
@@ -25,8 +23,6 @@ export default class FooterApp extends Component {
                          </FooterTab>
                      </Footer>
 
-
-      </Container>
 
     );
   }

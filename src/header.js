@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Container, Header, Left, Body, Title, Right  } from 'native-base';
-import { Image } from 'react-native';
+import { Image, StyleSheet } from 'react-native';
 
 export default class HeaderApp extends Component {
   render() {
@@ -8,12 +8,18 @@ export default class HeaderApp extends Component {
                 <Header>
                     <Left/>
                     <Body>
-                        <Image source={require("../img/logo.png")} />
+                        <Image source={require("../images/logo.png")} style={styles.image} />
                     </Body>
                     <Right />
                 </Header>
     );
   }
 }
+
+const styles = StyleSheet.create({
+  image: {
+    marginLeft: 50 
+  }
+});
 
 module.export = HeaderApp;
