@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { AppRegistry, View } from 'react-native';
 import HeaderApp from './header';
-import Home from './screens/home';
+// import Home from './screens/Home';
+import Restaurant from './screens/Restaurant';
 import FooterApp from './footerApp';
 import { Container, StyleProvider } from 'native-base';
 import studentMeTheme from './theme/variables/studentMeTheme';
@@ -14,7 +15,8 @@ export default class studentMeMobile extends Component {
       <StyleProvider style={getTheme(studentMeTheme)}>
         <Container>
           <HeaderApp/>
-           <Home/>
+           {/* <Home/> */}
+           <Restaurant />
            <FooterApp/>
           </Container>
 
