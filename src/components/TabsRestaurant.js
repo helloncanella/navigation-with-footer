@@ -7,7 +7,7 @@ class TabsRestaurant extends Component {
         return (
             <View style={{flex: 1}}>
             <Header hasTabs />
-            <Tabs>
+            <Tabs style={{padding: 0, shadowColor: null,borderWidth: null}}>
                 <Tab heading="Almoço">
                     <Text>Almoço</Text>
                 </Tab>
@@ -16,9 +16,14 @@ class TabsRestaurant extends Component {
                       <Text>Jantar</Text>
                 </Tab>
             </Tabs>
+
           </View>
         );
     }
+}
+
+const styles = {
+  tabs:{}
 }
 
 export default TabsRestaurant

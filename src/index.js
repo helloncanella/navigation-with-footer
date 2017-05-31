@@ -2,12 +2,12 @@ import React, { Component } from 'react';
 import { AppRegistry, View } from 'react-native';
 import HeaderApp from './header';
 // import Home from './screens/Home';
-import Restaurant from './screens/Restaurant';
+// import Restaurant from './screens/Restaurant';
 import FooterApp from './footerApp';
 import { Container, StyleProvider } from 'native-base';
 import studentMeTheme from './theme/variables/studentMeTheme';
 import getTheme from './theme/components';
-
+import Menu from './screens/Menu';
 
 export default class studentMeMobile extends Component {
   render() {
@@ -16,7 +16,8 @@ export default class studentMeMobile extends Component {
         <Container>
           <HeaderApp/>
            {/* <Home/> */}
-           <Restaurant />
+           {/* <Restaurant /> */}
+           <Menu />
            <FooterApp/>
           </Container>
 

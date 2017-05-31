@@ -9,20 +9,31 @@ import {
 import {
   Icon,
   Container,
-  Card
+  Card,
+  Tabs,
+  Tab,
+  Header
 } from 'native-base';
 
 const {width, height} = Dimensions.get('window')
 
 class BackgroundImageWithCard extends Component{
+
+constructor(props){
+  super(props);
+}
+
   render(){
     return(
-        <View style={styles.header}>
-           <Image style={styles.backgroundImage} source={require('../../images/restauranteUENF.jpg')}>
+           <Image style={styles.backgroundImage} source={this.props.image}>
              <Container>
               <View style={styles.containerCard}>
                 <Card style={custom.card}>
-                   <Text style={styles.title}> Restaurante</Text>
+                   <Text style={styles.title}>
+                     {
+                       this.props.title
+                     }
+                   </Text>
                    <View style={styles.wrap}>
                     <Text style={styles.open}>
                       <Icon ios='ios-alarm' android="md-alarm" style={{fontSize: 20, color: '#289f71'}}/> ABERTO</Text>
@@ -31,7 +42,6 @@ class BackgroundImageWithCard extends Component{
             </View>
             </Container>
            </Image>
-        </View>
     );
   }
 }
