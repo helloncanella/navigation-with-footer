@@ -63,7 +63,8 @@ const styles = StyleSheet.create({
     height: height*0.4
   },
   title:{
-    fontSize: 25
+    fontSize: 25,
+    fontFamily: 'Roboto_medium'
   },
   backgroundImage:{
     width,

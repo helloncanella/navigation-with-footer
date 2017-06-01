@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 import {
   View,
-  Dimensions
+  Dimensions,
+  ScrollView
 } from 'react-native';
 import{
 
@@ -13,16 +14,18 @@ const prato = require('../../images/prato.jpg');
 const {width, height} = Dimensions.get('window');
 
 class Menu extends Component {
-    render() {
-        return(
-        <View style={{flex:1}}>
+  render() {
+    return(
+      <View style={{flex:1}}>
+        <ScrollView>
           <BackgroundImageWithCard title="Cardápio" image={prato}  />
           <View style={styles.container}>
             <TabsRestaurant />
           </View>
-        </View>
+        </ScrollView>
+      </View>
 
-        );
+    );
   }
 }
 
