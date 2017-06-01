@@ -1,16 +1,31 @@
 import React, { Component } from 'react';
 import { Text } from 'react-native';
 import {Footer, FooterTab, Button, Icon, Container, Content } from 'native-base';
+import Home from './screens/Home';
+import Restaurant from './screens/Restaurant';
 
 export default class FooterApp extends Component {
+
+  constructor(props){
+    super(props);
+  }
+
   render() {
-    return (  
+    return (
 
                      <Footer >
                          <FooterTab>
-                             <Button active vertical>
+                             <Button active vertical
+                               title="Voltar"
+                               >
                                  <Icon name="home" />
-                                 <Text>Restaurante</Text>
+                                 <Text>Home</Text>
+                             </Button>
+                             <Button vertical
+
+                               >
+                                 <Icon name="restaurant" />
+                                 <Text>Comida</Text>
                              </Button>
                              <Button vertical>
                                  <Icon name="camera" />
@@ -27,5 +42,6 @@ export default class FooterApp extends Component {
     );
   }
 }
+
 
 module.export = FooterApp;

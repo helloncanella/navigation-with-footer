@@ -25,6 +25,6 @@ export default class Home extends Component {
     );
   }
 }
- 
+
 
 module.export = Home;
