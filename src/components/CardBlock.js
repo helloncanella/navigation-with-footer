@@ -20,7 +20,7 @@ class CardBlock extends Component{
     return(
                 <Content>
                     <Grid>
-                      <Row style={ [{backgroundColor: this.props.backgroundCol1},styles.row] } >
+                      <Row style={ [{backgroundColor: this.props.backgroundCol1},styles.row] }>
                         <Text style={styles.text}>
                           {
                             this.props.text

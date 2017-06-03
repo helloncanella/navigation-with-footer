@@ -2,15 +2,11 @@ import React, { Component } from 'react';
 import { Text } from 'react-native';
 import {Footer, FooterTab, Button, Icon, Container, Content } from 'native-base';
 import Home from './screens/Home';
-import Restaurant from './screens/Restaurant';
 
-export default class FooterApp extends Component {
+const FooterApp = (props) => {
 
-  constructor(props){
-    super(props);
-  }
+     const navigate  = props.navigation;
 
-  render() {
     return (
 
                      <Footer >
@@ -22,7 +18,7 @@ export default class FooterApp extends Component {
                                  <Text>Home</Text>
                              </Button>
                              <Button vertical
-
+                                 onPress={() => navigate('Restaurant')}
                                >
                                  <Icon name="restaurant" />
                                  <Text>Comida</Text>
@@ -40,8 +36,10 @@ export default class FooterApp extends Component {
 
 
     );
-  }
 }
 
+FooterApp.navigationOptions = {
+  header: null
+};
 
-module.export = FooterApp;
+export default FooterApp

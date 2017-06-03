@@ -1,29 +1,34 @@
 import React, { Component } from 'react';
 import { AppRegistry, View } from 'react-native';
-import HeaderApp from './header';
-// import Home from './screens/Home';
+import App from './App';
 import Restaurant from './screens/Restaurant';
+import Home from './screens/Home';
+import HeaderApp from './header';
 import FooterApp from './footerApp';
 import { Container, StyleProvider } from 'native-base';
 import studentMeTheme from './theme/variables/studentMeTheme';
 import getTheme from './theme/components';
-// import Menu from './screens/Menu';
+
+import { StackNavigator } from 'react-navigation';
 
 export default class studentMeMobile extends Component {
   render() {
+    const navigation  = this.props.navigation;
     return (
       <StyleProvider style={getTheme(studentMeTheme)}>
         <Container>
           <HeaderApp/>
-           {/* <Home/> */}
-           <Restaurant />
-           {/* <Menu /> */}
-           <FooterApp/>
-          </Container>
-
-      </StyleProvider>
+          <Home navigation={ navigation }  />
+          <FooterApp navigation={ navigation } />
+         </Container>
+     </StyleProvider>
     );
   }
 }
 
-AppRegistry.registerComponent('studentMeMobile', () => studentMeMobile);
+export const HomeStack = StackNavigator({
+  Home: { screen: Home},
+  Restaurant: { screen: Restaurant}
+});
+
+AppRegistry.registerComponent('studentMeMobile', () => HomeStack);

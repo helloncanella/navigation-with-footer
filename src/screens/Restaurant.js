@@ -23,22 +23,16 @@ const ImageRestaurant = require('../../images/restauranteUENF.jpg');
 
 const {width, height} = Dimensions.get('window')
 
-class Restaurant extends Component{
+const Restaurant = (props) => {
+           const navigate  = props.navigation;
 
-  static navigationOptions = {
-    header:{
-      visible: false
-    }
-  }
-
-  render(){
     return(
 
       <View style={styles.container}>
         <ScrollView>
           <BackgroundImageWithCard title="Restaurante" image={ImageRestaurant}   />
           <Content style={{marginTop: (height*0.15)}}>
-          <CardBlock backgroundCol1="#F9F9F9" text="Segunda" onPress={() => this.props.navigation.navigate('Menu')}  />
+          <CardBlock backgroundCol1="#F9F9F9" text="Segunda"  />
           <CardBlock backgroundCol1="#F9F9F9" text="Terça" />
           <CardBlock backgroundCol1="#F9F9F9" text="Quarta" />
           <CardBlock backgroundCol1="#F9F9F9" text="Quinta" />
@@ -48,7 +42,6 @@ class Restaurant extends Component{
       </View>
 
     );
-  }
 }
 
 const styles = StyleSheet.create({
@@ -58,9 +51,10 @@ const styles = StyleSheet.create({
   }
 });
 
-const SimpleApp = StackNavigator({
-  Restaurant: { screen: Restaurant },
-  Menu: { screen: Menu },
-});
+Restaurant.navigationOptions = {
+  header:{
+    visible: false
+  }
+};
 
 export default Restaurant
