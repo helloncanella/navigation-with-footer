@@ -1,8 +1,3 @@
-// import Mobile from './src/index';
+import Mobile from './src/index';
 
-// export default Mobile;
-
-
-
-
-import './src/index.js'
+export default Mobile;
